@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+ 
+   <bean class="com.collection.Employee" id="employeeS">
+  <property name="empId" value="11"/>
+  <property name="hobbies">
+      <list>
+      
+  <value>Music</value>
+  <value>Reading</value>
+  <value>LearningNT</value>
+  </list>
+  
+ </property>
+ 
+ <property name="contacts">
+   <set>
+      <value>7463837483</value>
+      <value>8468465846</value>
+      <value>6483849747</value>
+ 
+   </set>
+ 
+ </property>
+ <property name="mobile">
+     <map>
+      
+      <entry key="Apple" value="80000"/>
+      <entry key="redmi" value="50000"/>
+      <entry key="lava" value="60000"/>
+        
+      </map>
+ </property>
+ <property name="address" ref="add"/>
+ </bean>
+ <bean class="com.collection.Address" id="add">
+ <property name="city" value="nashik"/>
+ <property name="state" value="maharashtra"/>
+ </bean>
+ 
+ </beans>
